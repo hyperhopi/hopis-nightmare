@@ -1,0 +1,200 @@
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script
+        src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+    <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
+
+    <!-- sound -->
+    <!-- <audio id='audio_play' src='./assets/024_nightmare.mp3'></audio>
+    <script type="text/javascript">
+        function play() {
+            var audio = document.getElementById('audio_play');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+                audio.currentTime = 0
+            }
+        }
+    </script> -->
+    <!-- sound -->
+</head>
+</head>
+
+<body>
+    <audio src="./assets/mystery.mp3" autoplay></audio>
+    <script type="text/javascript">
+        function play() {
+            var audio = document.getElementById('audio_play');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+                audio.currentTime = 0
+            }
+        }
+    </script>
+
+    <a-scene inspector-plugin-recast>
+        <a-assets>
+            <img id="platform" src="./img/kirby.jpg">
+            <img id="spiral2" src="./img/spiral2.jpg">
+            <img id="spiral3" src="./img/spiral3.jpg">
+            <img id="spiral4" src="./img/spiral4.jpg">
+            <img id="spiral5" src="./img/spiral5.jpg">
+            <img id="spiral6" src="./img/spiral6.jpg">
+            <img id="spiral7" src="./img/spiral7.jpg">
+            <img id="spiral8" src="./img/spiral8.jpg">
+            <img id="spiral9" src="./img/spiral9.jpg">
+            <img id="brics1" src="./img/brics1.png">
+            <img id="brics2" src="./img/brics2.jpg">
+            <img id="brics3" src="./img/brics3.jpg">
+            <img id="grass1" src="./img/grass1.jpg">
+            <img id="question" src="./img/question.png">
+            <img id="map" src="./img/map.png">
+            <img id="instruction" src="./img/instruction.PNG">
+
+        </a-assets>
+
+        <!-- <a-entity environment="preset: goaland"></a-entity> -->
+        <a-entity
+            environment="preset:goaland;active:true;seed:17;skyType:gradient;skyColor:#14645f;horizonColor:#a3dab8;lighting:point;lightPosition:0.1 4 0.56;fog:0.73;ground:noise;groundYScale:0.81;groundColor:#ae3241;groundColor2:#db4453;dressing:mushrooms;dressingAmount:150;dressingColor:#a9313d;dressingVariance:5 10 5;grid:dots;gridColor:#239893"
+            preset-switcher="" id="environment">
+            <a-entity class="environment" position="0 50 0"
+                light="intensity:0.6;color:#89b1af;groundColor:#ae3241;type:hemisphere"></a-entity>
+            <a-entity class="environment" position="0.1 4 0.56"
+                light="shadowCameraLeft:-10;shadowCameraBottom:-10;shadowCameraRight:10;shadowCameraTop:10;intensity:0.6;type:point">
+            </a-entity>
+            <a-entity rotation="-90 0 0" class="environmentGround environment" scale="1 1 0.81"
+                shadow="cast:false;receive:false"></a-entity>
+            <a-entity class="environmentDressing environment"></a-entity>
+            <a-sky radius="200" theta-length="110" class="environment" geometry=""
+                material="npot:false;shader:gradientshader;topColor:#14645f;bottomColor:#a3dab8"></a-sky>
+            <a-entity id="stars" visible="false"></a-entity>
+        </a-entity>
+        <a-entity environment="lightPosition: 1 5 -2; groundColor: #445"></a-entity>
+
+        <a-torus position="0 1.25 -24" radius="2" color="hotpink"></a-torus>
+        <a-torus position="0 1.25 -23" radius="2" color="hotpink"></a-torus>
+        <a-torus position="0 1.25 -22" radius="2" color="hotpink"></a-torus>
+        <a-torus position="0 1.25 -21" radius="2" color="hotpink"></a-torus>
+        <a-torus position="0 1.25 -20" radius="2" color="hotpink"></a-torus>
+        <a-torus position="0 1.25 -19" radius="2" color="hotpink"></a-torus>
+        <a-torus position="0 1.25 -18" radius="2" color="hotpink"></a-torus>
+        <a-torus position="0 1.25 -17" radius="2" color="hotpink"></a-torus>
+        <a-torus position="0 1.25 -16" radius="2" color="hotpink"></a-torus>
+        <a-torus position="0 1.25 -15" radius="2" color="hotpink"></a-torus>
+        <a-torus position="0 1.25 -14" radius="2" color="hotpink"></a-torus>
+        <a-torus position="0 1.25 -13" radius="2" color="hotpink"></a-torus>
+        <a-torus position="0 1.25 -12" radius="2" color="hotpink"></a-torus>
+        <a-torus position="0 1.25 -11" radius="2" color="hotpink"></a-torus>
+        <a-torus position="0 1.25 -10" radius="2" color="hotpink"></a-torus>
+        <a-torus position="0 1.25 -9" radius="2" color="hotpink"></a-torus>
+        <a-torus position="0 1.25 -8" radius="2" color="hotpink"></a-torus>
+        <a-torus position="0 1.25 -7" radius="2" color="hotpink"></a-torus>
+        <a-torus position="0 1.25 -6" radius="2" color="hotpink"></a-torus>
+
+        <a-torus position="0 1.25 -5" radius="2" color="hotpink"></a-torus>
+        <a-torus position="0 1.25 -4" radius="2" color="hotpink"></a-torus>
+
+        <a-torus position="0 1.25 -3" radius="2" color="hotpink"></a-torus>
+        <a-torus position="0 1.25 -2" radius="2" color="hotpink"></a-torus>
+        <a-torus position="0 1.25 -1" radius="2" color="hotpink"></a-torus>
+        <a-torus position="0 1.25 0" radius="2" color="hotpink"></a-torus>
+        <a-torus position="0 1.25 1" radius="2" color="hotpink"></a-torus>
+        <a-torus position="0 1.25 2" radius="2" color="hotpink"></a-torus>
+        <a-torus position="0 1.25 3" radius="2" color="hotpink"></a-torus>
+
+
+        <a-sphere position="0 1.25 6" radius="3.5" color="hotpink"
+            sound="src: url(./assets/102_bounce2.mp3); on: click"></a-sphere>
+        <!-- Camera + cursor. -->
+        <a-camera>
+            <a-cursor geometry="primitive: ring" material="color: limegreen; shader: flat"></a-cursor>
+        </a-camera>
+
+        <a-box src=" #question" color="#9c9690" rotation="25 25 0" position="2 2 -34" depth="2" height="2" width="2"
+            animation="property: rotation; to: 180 -90 45; loop: false; dur: 7000 easing:linear"
+            sound="src: url(./assets/063_wrong.mp3); on: click">
+        </a-box>
+
+        <a-box src=" #question" color="#9c9690" rotation="25 25 0" position="-3 2 -34" depth="2" height="2" width="2"
+            animation="property: rotation; to: -55 155 25; loop: false; dur: 7000 easing:linear"
+            sound="src: url(./assets/063_wrong.mp3); on: click">
+        </a-box>
+
+        <a-box src="#question" color="#9c9690" rotation="35 -75 0" position="-7 2 -34" depth="2" height="2" width="2"
+            animation="property: rotation; to: 0 -102 15; loop: false; dur: 7000 easing:linear"
+            onclick="location='pp-intro.html'">
+        </a-box>
+
+        <a-image src="#instruction" position="0 2 -26.5" rotation="0 0 -5" opacity="0.7"
+            sound="src: url(./assets/032_wand.WAV); on: click"></a-image>
+
+        <!-- fake-box -->
+        <!-- <a-box src="#question" color="lightgrey" rotation="25 25 0" position="34 2 47" depth="2" height="2" width="2">
+        </a-box> -->
+        <a-cylinder rotation="0 90 0" position="35.5 0.85 45" radius="0.35" height="2" color="green">
+        </a-cylinder>
+        <a-cylinder rotation="0 90 0" position="35.5 2.05 45" radius="0.45" height="0.5" color="green">
+        </a-cylinder>
+        <a-text value="2" color="black" position="35.5 0.85 47" width="15"></a-text>
+
+        <a-cylinder rotation="0 90 0" position="34 0.85 47" radius="0.35" height="2" color="green">
+        </a-cylinder>
+        <a-cylinder rotation="0 90 0" position="34 2.05 47" radius="0.45" height="0.5" color="green">
+        </a-cylinder>
+        <!-- <a-text value="2" color="black" position="-0.2 0.5 -33.65" width="15"></a-text> -->
+
+        <a-cylinder rotation="0 90 0" position="32.5 0.85 49" radius="0.35" height="2" color="green">
+        </a-cylinder>
+        <a-cylinder rotation="0 90 0" position="32.5 2.05 49" radius="0.45" height="0.5" color="green">
+        </a-cylinder>
+        <!-- <a-text value="2" color="black" position="-0.2 0.5 -33.65" width="15"></a-text> -->
+
+        <a-sphere radius="0.3" position="35.5 3.35 45" shadow="" material="" onclick="location='flying-boxes.html'">
+        </a-sphere>
+        <a-sphere radius=" 0.3" position="34 3.35 47" shadow="" material="" onclick="location='flat-gallery.html'">
+        </a-sphere>
+
+        <a-sphere radius="0.3" position="32.5 3.35 49" shadow="" material="" onclick="location='./mosters/index.html'">
+        </a-sphere>
+
+        <!-- Basic circle. -->
+        <a-circle src="#spiral6" radius="70" position="1.5 -2 -37"
+            animation="property: rotation; to: 0 0 360; loop: true; dur: 10000"></a-circle>
+        <!-- <a-box position="-1 1.6 -5" src="#spiral1"></a-box> -->
+        <!-- <a-box position="-1 1.6 -5" animation="property: material.color; from:red; to:blue; dur: 2000; easing:
+            linear; loop:true;"></a-box> -->
+
+
+
+        <!-- Title-task -->
+        <a-text value="Ha Ha Ha Ha... \n It's not gonna by easy.. \n\n No clue, innit?" color="white"
+            position="-2.5 5 -34" width="15">
+        </a-text>
+
+        <!-- banner -->
+        <!-- <a-box color="tomato" position="0 1.7 -3" rotation="0 0 0" depth="0.1" height="0.5" width="2"></a-box> -->
+        <a-text value="Where am I now...?" color="black" position="-0.9 1.7 -1" width="5.5"></a-text>
+        <a-text value="Am i still in a Dream..?" color="black" rotation="0 25 0" position="-0.7 1.7 -5" width="5">
+        </a-text>
+        <a-text value="Let me Out..!" color="black" rotation="0 -15 0" position="-0.7 1.7 -8" width="5">
+        </a-text>
+        <a-text
+            value="OH NO,LET ME OUT! \n OH NO,LET ME OUT! \n OH NO,LET ME OUT! \n OH NO,LET ME OUT! \n OH NO,LET ME OUT! \n OH NO,LET ME OUT! \n OH NO,LET ME OUT! \n OH NO,LET ME OUT! \n OH NO,LET ME OUT! \n OH NO,LET ME OUT!"
+            color="black" rotation="0 0 0" position="-1 1.7 -13" width="5">
+        </a-text>
+        <a-text value="@#!O*#^$U#&T!@#$&..." color="black" rotation="0 0 0" position="-1 1.7 -17" width="5">
+        </a-text>
+
+        <!-- sky -->
+        <a-sky color="lightblue"></a-sky>
+
+    </a-scene>
+
+</body>
+
+</html>
