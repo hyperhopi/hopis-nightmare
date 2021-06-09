@@ -10,6 +10,61 @@
 </head>
 
 <body>
+    <div class="instruction-container" id="hide-div">
+        <h1>No-Way-Out!</h1>
+        <h2>Continious Nightmare...</h2>
+        <p>Solve all the Tasks, Find the secret items and Kill all the Monsters.<br>
+            Prepare a Keyboard, a Mouse, a good volume of Speaker <br>...and a Brave heart.<br><br>
+            <em><b>Click</b></em><br> if you feel ready to enter this endless horrible nightmare.
+        </p>
+        <button id="start" onclick="hide()">START</button>
+
+    </div>
+
+    <script>
+        function hide() {
+            let x = document.getElementById('hide-div')
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
+    <style>
+        .instruction-container {
+            position: fixed;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            top: 0;
+            left: 0;
+            transform: translate(calc(50vw - 50%), calc(50vh - 50%));
+            z-index: 999;
+            border: 1px solid black;
+            background-color: rgb(6, 250, 197);
+            padding: 1rem 2rem 5rem 2rem;
+            width: 70%;
+            display: block;
+        }
+
+        h1,
+        h2,
+        p {
+            text-align: center;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        #start {
+            position: fixed;
+            left: 50%;
+            transform: translate(-50%, 0);
+            padding: 12px 30px;
+        }
+    </style>
+
     <!-- <audio src="./assets/mystery.mp3" autoplay></audio>
     <script type="text/javascript">
         function play() {
