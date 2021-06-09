@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <audio src="./assets/mystery.mp3" autoplay></audio>
+    <!-- <audio src="./assets/mystery.mp3" autoplay></audio>
     <script type="text/javascript">
         function play() {
             var audio = document.getElementById('audio_play');
@@ -35,25 +35,14 @@
                 audio.currentTime = 0
             }
         }
-    </script>
+    </script> -->
 
     <a-scene inspector-plugin-recast>
         <a-assets>
             <img id="platform" src="./img/kirby.jpg">
-            <img id="spiral2" src="./img/spiral2.jpg">
-            <img id="spiral3" src="./img/spiral3.jpg">
-            <img id="spiral4" src="./img/spiral4.jpg">
-            <img id="spiral5" src="./img/spiral5.jpg">
             <img id="spiral6" src="./img/spiral6.jpg">
-            <img id="spiral7" src="./img/spiral7.jpg">
-            <img id="spiral8" src="./img/spiral8.jpg">
-            <img id="spiral9" src="./img/spiral9.jpg">
-            <img id="brics1" src="./img/brics1.png">
-            <img id="brics2" src="./img/brics2.jpg">
-            <img id="brics3" src="./img/brics3.jpg">
             <img id="grass1" src="./img/grass1.jpg">
             <img id="question" src="./img/question.png">
-            <img id="map" src="./img/map.png">
             <img id="instruction" src="./img/instruction.PNG">
 
         </a-assets>
@@ -113,6 +102,8 @@
         <!-- Camera + cursor. -->
         <a-camera>
             <a-cursor geometry="primitive: ring" material="color: limegreen; shader: flat"></a-cursor>
+            <a-sound src="url(./assets/mystery.mp3)" autoplay="true" position="0 0 0" loop="true" volume="0.5">
+            </a-sound>
         </a-camera>
 
         <a-box src=" #question" color="#9c9690" rotation="25 25 0" position="2 2 -34" depth="2" height="2" width="2"
