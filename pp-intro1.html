@@ -13,11 +13,35 @@
 </head>
 
 <body>
+    <audio src="./assets/015_coin.mp3" autoplay></audio>
+    <!-- <script>
+        function hide() {
+            let x = document.getElementById('hide-div')
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function play() {
+            var audio = document.getElementById('audio_play');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+                audio.currentTime = 0
+            }
+        }
+
+    </script> -->
+
     <div class="instruction-container" id="hide-div">
         <h1 id="">Solve the tasks</h1>
         <h2>Let's try the first one<br> -> place your <span style="color:limegreen">GREEN RING CURSOR</span> on the
             <span style="color:hotpink">BALL NR.1</span><br>then <span style="color:hotpink">LEFT-CLICK</span> somewhere
-            to activate your ring<br></h2>
+            to activate your ring<br>
+        </h2>
         <!-- <h2>Solve all the Tasks, <br>Find the secret items <br>and Kill all the Monsters.<br></h2> -->
         <h2>Can you manage, you little girl?</h2>
         <button id="start" onclick="hide()">START</button>
