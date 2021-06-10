@@ -6,7 +6,7 @@ body {
 .instruction-container {
   position: fixed;
   font-family: "Amatic SC", cursive;
-  font-size: 35px;
+  font-size: 29px;
   top: 0;
   left: 0;
   transform: translate(calc(50vw - 50%), calc(50vh - 50%));
