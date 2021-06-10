@@ -54,7 +54,7 @@
         }
     </script>
 
-    <a-scene inspector-plugin-recast>
+    <a-scene fog="type: linear; color: white">
         <a-assets>
             <img id="platform" src="./img/kirby.jpg">
             <img id="spiral6" src="./img/spiral6.jpg">
@@ -63,6 +63,7 @@
             <img id="question" src="./img/question.png">
             <img id="instruction" src="./img/instruction.PNG">
             <img id="arrow" src="./img/arrow.png">
+            <!-- <img id="arrow" src="./img/arrow.png"> -->
 
         </a-assets>
 
@@ -83,6 +84,14 @@
             <a-entity id="stars" visible="false"></a-entity>
         </a-entity>
         <a-entity environment="lightPosition: 1 5 -2; groundColor: #445"></a-entity>
+
+        <a-sphere radius="0.1" position="0.5 1.58 -1" shadow="" material="" color="#43a6bd"
+            sound="src: url(./assets/intro_voice.mp3); on: click">
+        </a-sphere>
+        <a-text value="cilck me!" color="black" position="0.3 1.6 -0.56" rotation="0 0 7" width="1"></a-text>
+
+        <a-text value="bring the green-cursor on the ball and click" color="black" position="0.3 1.57 -0.56"
+            rotation="0 0 -2.5" width="0.5"></a-text>
 
         <a-torus position="0 1.25 -24" radius="2" color="hotpink"></a-torus>
         <a-torus position="0 1.25 -23" radius="2" color="hotpink"></a-torus>
@@ -164,12 +173,12 @@
         </a-cylinder>
         <!-- <a-text value="2" color="black" position="-0.2 0.5 -33.65" width="15"></a-text> -->
 
-        <a-sphere radius="0.3" position="35.5 3.35 45" shadow="" material="" onclick="location='flying-boxes.html'">
+        <a-sphere radius="0.3" position="35.5 3.35 45" shadow="" material="" onclick="">
         </a-sphere>
-        <a-sphere radius=" 0.3" position="34 3.35 47" shadow="" material="" onclick="location='flat-gallery.html'">
+        <a-sphere radius=" 0.3" position="34 3.35 47" shadow="" material="" onclick="">
         </a-sphere>
 
-        <a-sphere radius="0.3" position="32.5 3.35 49" shadow="" material="" onclick="location='./mosters/index.html'">
+        <a-sphere radius="0.3" position="32.5 3.35 49" shadow="" material="" onclick="">
         </a-sphere>
 
         <!-- Basic circle. -->
