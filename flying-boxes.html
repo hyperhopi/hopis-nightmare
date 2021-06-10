@@ -6,9 +6,50 @@
     <script
         src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
     <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
+    <div class="instruction-container" id="hide-div">
+        <h1 id="">Solve the task 2 : find the sleeping hopi</h1>
+        <h2>now, as you worked quite hard,<br> what about some <span style="color:rgb(197, 8, 235)">PARTY
+                TIME</span>? o(*'▽'*)/☞ﾟ’☆✧*✲ﾟ*<br><br>there is only <span style="color:hotpink">'ONE BOX'</span>
+            that
+            is
+            <span style="color:orange">not moving</span> at
+            all... <br>Find that lazy one and <span style="color:orange">poke it</span> to awake!<br> -> place your
+            <span style="color:limegreen">GREEN RING CURSOR</span>
+            on the box<br>then <span style="color:hotpink">left-click</span> anywhere random, as you did earlier<br>
+        </h2>
+        <!-- <h2>Solve all the Tasks, <br>Find the secret items <br>and Kill all the Monsters.<br></h2> -->
+        <h2>Can you manage, you little girl?</h2>
+        <button id="start" onclick="hide();play()">START</button>
+    </div>
+    <audio src="./assets/seikoSong.mp3" autoplay></audio>
+    <script>
+        function hide() {
+            let x = document.getElementById('hide-div')
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function play() {
+            var audio = document.getElementById('audio_play');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+                audio.currentTime = 0
+            }
+        }
+
+    </script>
     <a-scene>
         <a-asset>
             <a-asset-item id="kirby" src="./img/kirby.jpg"></a-asset-item>
@@ -38,7 +79,13 @@
         </a-box>
 
         <!-- box on the left -->
-        <a-box dynamic-body height="1" width="1" depth="1" position="-5 3 -4"
+        <a-box dynamic-body height="1" width="1" depth="1" position="-5 2 -4"
+            animation="property: rotation; to: 0 -360 0; loop: true; dur: 3000 easing:linear" src="#masaru-hopi">
+        </a-box>
+        <a-box dynamic-body height="1" width="1" depth="1" position="5 2 -4"
+            animation="property: rotation; to: 0 -360 0; loop: true; dur: 3000 easing:linear" src="#masaru-hopi">
+        </a-box>
+        <a-box dynamic-body height="1" width="1" depth="1" position="-3 7 -4"
             animation="property: rotation; to: 0 -360 0; loop: true; dur: 3000 easing:linear" src="#masaru-hopi">
         </a-box>
 
@@ -78,6 +125,12 @@
             src="#masaru-hopi">
         </a-box>
         <a-box position="1 1 1" animation="property: position; to: 12 7 0; dur: 3000; easing: linear; loop: true"
+            src="#masaru-hopi">
+        </a-box>
+        <a-box position="2 2 2" animation="property: position; to: 12 -7 0; dur: 3000; easing: linear; loop: true"
+            src="#masaru-hopi">
+        </a-box>
+        <a-box position="2 2 2" animation="property: position; to: 17 19 0; dur: 3000; easing: linear; loop: true"
             src="#masaru-hopi">
         </a-box>
         <a-box position="1 3 1" animation="property: position; to: -7 5 0; dur: 3000; easing: linear; loop: true"
@@ -131,8 +184,18 @@
         <!-- mirrored -->
 
         <!-- click-box -->
-        <a-box position="3.5 6.5 3.8" rotation="0 45 0" src="#masaru-hopi" shadow="" material="" geometry=""
-            onclick="location='pp-intro.html'">
+        <a-box position="3.5 9.5 2.8" rotation="0 45 0" src="#masaru-hopi" shadow="" material="" geometry=""
+            onclick="location='pp-intro3.html'">
+        </a-box>
+        <a-box position="-17 -18 9" color='yellow'
+            animation="property: position; to: 26 67 139; dur: 3000; easing: linear; loop: true">
+        </a-box>
+        </a-box>
+        <a-box dynamic-body height="1" width="1" depth="1" position="3.5 6.5 43.8"
+            animation="property: rotation; to: 0 -360 0; loop: true; dur: 3000 easing:linear" src="#masaru-hopi">
+        </a-box>
+        <a-box height="1" width="1" depth="1" position=" 1.5 8.5 2.8"
+            animation="property: rotation; to: 65 270 180; loop: true; dur: 3000" src="#masaru-hopi">
         </a-box>
 
         <!-- sphere going around -->
@@ -145,20 +208,20 @@
         <a-entity rotation="27 136 30" animation="property: rotation; to: -45 220 270; loop: true; dur: 3000">
             <a-sphere position="5 0 0" src="#masaru-hopi"></a-sphere>
         </a-entity>
+        <a-entity rotation="17 56 80" animation="property: rotation; to: 15 50 270; loop: true; dur: 3000">
+            <a-sphere position="5 0 0" src="#masaru-hopi"></a-sphere>
+        </a-entity>
+        <a-entity rotation="27 36 30" animation="property: rotation; to: 3.5 13.5 2.8; loop: true; dur: 3000">
+            <a-sphere position="5 0 0" src="#masaru-hopi"></a-sphere>
+        </a-entity>
 
         <a-image src="#hopi-instruction" position="2 3.6 -3.5" rotation="0 0 -5" opacity="0.7"
             sound="src: url(./assets/seikoSong.mp3); on: click"></a-image>
 
-        <a-text value="Click me Please! ->\nXD (Ring on)" rotation="0 0 -7" color="red" position="-1 3.6 -3.5"
-            width="7">
+        <a-text value="Don't leave too soon!" rotation="0 -15 0" color="lightblue" position="-9.8 4.3 -8" width="43">
         </a-text>
-
-        <a-text value="Then you go \nFind the sleeping Box!\n<3" rotation="0 0 5" color="red" position="1 2.5 -3.5"
-            width="7">
-        </a-text>
-
-        <a-text value="But Don't leave too soon!" rotation="0 25 15" color="lightblue" position="-6 2.5 -5" width="43">
-        </a-text>
+        <!-- <a-text value="Don't leave too soon!" rotation="-11 -11 15" color="lightblue" position="-6 2.5 -8" width="43">
+        </a-text> -->
         <a-text value="Let's play together<3" rotation="0 25 -13" color="lightblue" position="-2 2.5 -5" width="43">
         </a-text>
 

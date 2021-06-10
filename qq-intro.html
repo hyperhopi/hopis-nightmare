@@ -5,9 +5,35 @@
     <script
         src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
     <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
+    <audio src="./assets/119_santus.mp3" autoplay></audio>
+    <script>
+        function hide() {
+            let x = document.getElementById('hide-div')
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function play() {
+            var audio = document.getElementById('audio_play');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+                audio.currentTime = 0
+            }
+        }
+    </script>
+
     <a-scene inspector-plugin-recast>
         <a-assets>
             <img id="platform" src="./img/kirby.jpg">
@@ -47,8 +73,7 @@
         </a-entity>
         <a-entity environment="lightPosition: 1 5 -2; groundColor: #445"></a-entity>
 
-        <a-sphere position="0 1.25 6" radius="3.5" color="hotpink"
-            onclick="location='https://hamiat.github.io/spaces/index.html'"></a-sphere>
+        <a-sphere position="0 1.25 6" radius="3.5" color="hotpink" onclick="location='outro.html'"></a-sphere>
         <!-- Camera + cursor. -->
         <a-camera>
             <a-cursor geometry="primitive: ring" material="color: limegreen; shader: flat"></a-cursor>
@@ -75,8 +100,8 @@
         <!-- onclick="location=''" -->
         <!-- pipes -->
         <!-- instruction -->
-        <a-image src="#instruction" position="3.5 3.6 -3.5" rotation="0 0 -5" opacity="0.7"
-            sound="src: url(./assets/032_wand.WAV); on: click"></a-image>
+        <!-- <a-image src="#instruction" position="3.5 3.6 -3.5" rotation="0 0 -5" opacity="0.7"
+            sound="src: url(./assets/032_wand.WAV); on: click"></a-image> -->
 
         <!-- Title-task -->
         <a-text value="Ha Ha Ha Ha... \n It's not gonna by easy.. \n\n No clue, innit?" color="white"

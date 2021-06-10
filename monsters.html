@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script
+        src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+    <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="instruction-container" id="hide-div">
+        <h1 id="">Solve the task 3 : KILL THE MONSTERS</h1>
+        <h2>now it is time to distroy the enemies,<br> let's kill the <span style="color:limegreen">
+                MONSTERS </span>that disturbs your sleep!<br>
+            so that you can finally escape this endless Dream...<br><br>
+
+            -> <span style="color:hotpink">Attack</span>: <span style="color:limegreen">spacebar</span><br>
+            -> <span style="color:hotpink">left</span>: <span style="color:limegreen">left-Key</span><br>
+            -> <span style="color:hotpink">right</span>: <span style="color:limegreen">right-Key</span></h2>
+        <!-- <h2>Solve all the Tasks, <br>Find the secret items <br>and Kill all the Monsters.<br></h2> -->
+        <h2>Can you manage, you little girl?</h2>
+        <button id="start" onClick="location.href='./mosters/index.html'">START</button>
+    </div>
+
+    <script>
+        function hide() {
+            let x = document.getElementById('hide-div')
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

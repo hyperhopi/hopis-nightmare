@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Task2 : Hidden Boxes</title>
+  <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+  <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+  <script src="js/aframe.js"></script>
+  <script
+    src="https://rawgit.com/bryik/aframe-bmfont-text-component/master/dist/aframe-bmfont-text-component.js"></script>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="instruction-container" id="hide-div">
+    <h1 id="">Solve the task 1 : find the hidden box</h1>
+    <h2>place your <span style="color:limegreen">BLACK RING CURSOR on the box</span> to <span
+        style="color:hotpink">enter the place</span>.<br>once you are
+      in, <br>you must <span style="color:hotpink">find 'a hidden box'</span> to escape each scene.<br> -> Let's start
+      with box 1</h2>
+    <!-- <h2>Solve all the Tasks, <br>Find the secret items <br>and Kill all the Monsters.<br></h2> -->
+    <h2>Can you manage, you little girl?</h2>
+    <button id="start" onclick="hide()">START</button>
+
+  </div>
+
+  <script>
+    function hide() {
+      let x = document.getElementById('hide-div')
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
+  <a-scene>
+    <!--The Assets-->
+    <a-assets>
+      <a-asset-item id="home-ply" src="models/home.ply"></a-asset-item>
+      <img id="sky" src="https://farm5.staticflickr.com/4465/37557293182_d84060aad7_k.jpg">
+
+      <img id="church" src="img/church.jpg">
+      <img id="countryside" src="img/countryside.jpg">
+      <img id="townhall" src="img/townhall.jpg">
+      <img id="temple" src="img/temple.jpg">
+      <img id="box-instruction" src="./img/box-instruction.PNG">
+
+      <!-- text -->
+
+    </a-assets>
+
+
+    <!--The placement of model-->
+    <a-entity camera position="2 1 10" look-controls wasd-controls>
+      <a-entity cursor="fuse: true; fuseTimeout: 1000" position="0 0 -1"
+        geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat">
+        <a-animation begin="click" easing="ease-in" attribute="scale" fill="backwards" from="0.1 0.1 0.1" to="1 1 1">
+        </a-animation>
+        <a-animation begin="cursor-fusing" easing="ease-in" attribute="scale" fill="forwards" from="1 1 1"
+          to="0.1 0.1 0.1"></a-animation>
+      </a-entity>
+    </a-entity>
+
+    <a-entity id="scene1">
+      <!-- <a-sky src="#sky"></a-sky> -->
+      <a-box color="yellow" position="-9 6 0" width="2" height="2" onclick="setSceneChurch()"></a-box>
+      <a-box color="yellow" position="-0.5 7.5 0" width="2" height="2" onclick="setSceneCountryside()"></a-box>
+      <a-box color="yellow" position="7 7.5 -3" width="2" height="2" onclick="setSceneTownhall()"></a-box>
+      <a-box color="yellow" position="14 5.5 -1" width="2" height="2" onclick="setSceneTemple()"></a-box>
+
+      <a-entity light="color: white; intensity: 1.5" position="-1 1 0"></a-entity>
+
+      <a-plane color="#9933ff" height="1000" width="1000" rotation="-90 0 0"></a-plane>
+      <a-sky color="#6EBAA7"></a-sky>
+      <!-- <a-image src="#instruction" position="2 3.6 -3.5" rotation="0 0 -5" opacity="0.7"
+        sound="src: url(./assets/032_wand.WAV); on: click"></a-image> -->
+
+      <a-text value="Find the Box\n + Cursor on Object\n(no click)" rotation="55 0 0" color="black"
+        position="-7.5 3.5 -3" width="55"></a-text>
+    </a-entity>
+
+
+
+    <a-entity id="sceneChurch" visible="false">
+      <a-sky src="#church"></a-sky>
+      <a-box color="#3a0808" position="30 2 18" width="2" height="2" onclick="setScene1()"></a-box>
+      <a-light id="ambient1" type="ambient" color="">
+    </a-entity>
+
+    <a-entity id="sceneCountryside" visible="false">
+      <a-sky src="#countryside"></a-sky>
+      <a-box color="#284903" position="13 -3 0" onclick="setScene1()"></a-box>
+      <a-light id="ambient1" type="ambient" color="">
+    </a-entity>
+
+    <a-entity id="sceneTownhall" visible="false">
+      <a-sky src="#townhall"></a-sky>
+      <a-box color="#6b4b4b" position="45 -25 23" onclick="setScene1()"></a-box>
+      <a-light id="ambient1" type="ambient" color="">
+    </a-entity>
+
+    <a-entity id="sceneTemple" visible="false">
+      <a-sky src="#temple"></a-sky>
+      <a-box color="black" position="35 35 34" onclick="location.href='pp-intro2.html'"></a-box>
+      <!-- <a-box color="black" position="35 35 34" onclick="setScene1()"></a-box> -->
+      <a-light id="ambient1" type="ambient" color="">
+    </a-entity>
+
+
+
+
+  </a-scene>
+
+  <script type="text/javascript">
+    function setScene1() {
+      document.getElementById('scene1').setAttribute('visible', 'true')
+      document.getElementById('sceneChurch').setAttribute('visible', 'false')
+      document.getElementById('sceneCountryside').setAttribute('visible', 'false')
+      document.getElementById('sceneTownhall').setAttribute('visible', 'false')
+      document.getElementById('sceneTemple').setAttribute('visible', 'false')
+    }
+    function setSceneChurch() {
+      document.getElementById('scene1').setAttribute('visible', 'false')
+      document.getElementById('sceneChurch').setAttribute('visible', 'true')
+    }
+
+    function setSceneCountryside() {
+      document.getElementById('scene1').setAttribute('visible', 'false')
+      document.getElementById('sceneCountryside').setAttribute('visible', 'true')
+    }
+
+    function setSceneTownhall() {
+      document.getElementById('scene1').setAttribute('visible', 'false')
+      document.getElementById('sceneTownhall').setAttribute('visible', 'true')
+    }
+
+    function setSceneTemple() {
+      document.getElementById('scene1').setAttribute('visible', 'false')
+      document.getElementById('sceneTemple').setAttribute('visible', 'true')
+    }
+  </script>
+
+</body>
+
+</html>

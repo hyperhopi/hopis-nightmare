@@ -21,6 +21,7 @@
       display: block;
     }
   </style>
+
 </head>
 
 <body>
@@ -49,6 +50,31 @@
         pos(width() / 2, height() / 2)
       ])
     });
+
+    scene("intro", (args = {}) => {
+      add([
+        text("Good luck, that's all I can say..."),
+        origin("center"),
+        // scale(10),
+        pos(width() / 2, height() / 2),
+      ])
+      setTimeout(function () {
+        go('main')
+      }, 3000);
+    })
+
+    // scene("intro", (args = {}) => {
+    //   add([
+    //     text("intro. \n\n introintrointrointrointro..."),
+    //     origin("center"),
+    //     // scale(10),
+    //     pos(width() / 2, height() / 2),
+    //   ])
+    //   setTimeout(function () {
+    //     go('main')
+    //   }, 10000);
+    // })
+
     scene("main", (args = {}) => {
       const MOVE_SPEED = 200
 
@@ -201,6 +227,7 @@
         }
       })
     });
+
     scene("win", (args = {}) => {
       add([
         text("you win! \n\n Daughter, You have killed all the monsters \n\n I am proud of you... "),
@@ -229,7 +256,7 @@
       }, 5000);
     })
 
-    start("main");
+    start("intro");
 
   </script>
 </body>

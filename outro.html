@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script
+        src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+    <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <audio src="./assets/mystery.mp3" autoplay></audio>
+    <script>
+        function hide() {
+            let x = document.getElementById('hide-div')
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function play() {
+            var audio = document.getElementById('audio_play');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+                audio.currentTime = 0
+            }
+        }
+
+    </script>
+    <div class="instruction-container" id="hide-div">
+        <h1 id="">DREAM CARRIES ON..</h1>
+        <h2>You have gone through a lot</span> and did a <span style="color:orange">GREAT
+                JOB!</span> well done.<br>
+            But you know, Somtimes in <span style="color:limegreen">LIFE</span>...<br>
+            <span style="color:rgb(143, 231, 2)">WHEN YOU THINK IT's OVER, IT IS NOT REALLY OVER</span>.<br>
+            I know. that HURTS</span>.<br>
+            But i guess everything happens with its <span style="color:rgb(2, 231, 182)">GOOD REASON</span><br>
+            and it might still be <span style="color:rgb(197, 8, 235)"> WORTH TO TAKE A LOOK INTO</span>, see what is
+            the <span style="color:limegreen"> MEANING</span>
+            of each of them.<br>
+            Perhaps,,,<br> there is <span style="color:hotpink">NO SUCH A THING AS JUST A BAD DREAM</span>, after
+            all.<br><br>
+
+            Good luck.....
+        </h2>
+        <button id="start" onClick="location.href='https://hamiat.github.io/spaces/index.html'">continue</button>
+    </div>
+    <script>
+        function hide() {
+            let x = document.getElementById('hide-div')
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
