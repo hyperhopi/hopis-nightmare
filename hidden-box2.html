@@ -69,10 +69,13 @@
 
     <a-entity id="scene1">
       <!-- <a-sky src="#sky"></a-sky> -->
-      <a-box color="yellow" position="-9 6 0" width="2" height="2" onclick="setSceneChurch()"></a-box>
+      <a-box color="yellow" position="-9 6 0" width="2" height="2" sound="src: url(./assets/063_wrong.mp3); on: click">
+      </a-box>
       <a-box color="yellow" position="-0.5 7.5 0" width="2" height="2" onclick="setSceneCountryside()"></a-box>
-      <a-box color="yellow" position="7 7.5 -3" width="2" height="2" onclick="setSceneTownhall()"></a-box>
-      <a-box color="yellow" position="14 5.5 -1" width="2" height="2" onclick="setSceneTemple()"></a-box>
+      <a-box color="yellow" position="7 7.5 -3" width="2" height="2"
+        sound="src: url(./assets/063_wrong.mp3); on: click"></a-box>
+      <a-box color="yellow" position="14 5.5 -1" width="2" height="2"
+        sound="src: url(./assets/063_wrong.mp3); on: click"></a-box>
 
       <a-entity light="color: white; intensity: 1.5" position="-1 1 0"></a-entity>
 
@@ -95,20 +98,20 @@
 
     <a-entity id="sceneCountryside" visible="false">
       <a-sky src="#countryside"></a-sky>
-      <a-box color="#284903" position="13 -3 0" onclick="setScene1()"></a-box>
+      <a-box color="#284903" position="35 2 18" width="1" height="1" onclick="location.href='hidden-box3.html'"></a-box>
+
       <a-light id="ambient1" type="ambient" color="">
     </a-entity>
 
     <a-entity id="sceneTownhall" visible="false">
       <a-sky src="#townhall"></a-sky>
-      <a-box color="#6b4b4b" position="45 -25 23" onclick="setScene1()"></a-box>
+      <a-box color="#6b4b50" position="30 1.5 18" width="1" height="1" onclick="setScene1()"></a-box>
       <a-light id="ambient1" type="ambient" color="">
     </a-entity>
 
     <a-entity id="sceneTemple" visible="false">
       <a-sky src="#temple"></a-sky>
-      <a-box color="black" position="35 35 34" onclick="location='pp-intro.html'"></a-box>
-      <!-- <a-box color="black" position="35 35 34" onclick="setScene1()"></a-box> -->
+      <a-box color="black" position="35 35 34" onclick="setScene1()"></a-box>
       <a-light id="ambient1" type="ambient" color="">
     </a-entity>
 
