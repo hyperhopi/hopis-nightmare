@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <audio src="./assets/mystery.mp3" autoplay></audio>
+    <!-- <audio src="./assets/mystery.mp3" autoplay></audio>
     <script>
         function hide() {
             let x = document.getElementById('hide-div')
@@ -34,14 +34,14 @@
             }
         }
 
-    </script>
+    </script> -->
     <div class="instruction-container" id="hide-div">
         <h1 id="">Continious nightmare....</h1>
         <h2><span style="color:hotpink">SOLVE</span> all the Tasks, <br>Find the <span style="color:orange">secret
                 items</span> <br>and <span style="color:limegreen">KILL</span> all the
             Monsters.<br></h2>
         <h2>Can you manage, you little girl?</h2>
-        <button id="start" onclick="hide()">START</button>
+        <button id="start" onclick="hide();">START</button>
 
     </div>
 
@@ -123,8 +123,8 @@
         <!-- Camera + cursor. -->
         <a-camera>
             <a-cursor geometry="primitive: ring" material="color: limegreen; shader: flat"></a-cursor>
-            <!-- <a-sound src="url(./assets/mystery.mp3)" autoplay="true" position="0 0 0" loop="true" volume="0.5">
-            </a-sound> -->
+            <a-sound src="url(./assets/mystery.mp3)" autoplay="true" position="0 0 0" loop="true" volume="0.5">
+            </a-sound>
         </a-camera>
 
         <a-box src=" #question" color="#9c9690" rotation="25 25 0" position="2 2 -34" depth="2" height="2" width="2"
